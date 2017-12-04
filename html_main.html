@@ -34,6 +34,15 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
     </script>
     
+     <!-- ODA TESTER -->
+    <script>
+      var infowindow = new google.maps.InfoWindow({
+  content:"Hello World!"
+  });
+
+infowindow.open(map,marker);
+    </script>
+    
     <!-- Twitter API -->
     <script>
     let oembedResponse = await fetch(new Request('https://publish.twitter.com/oembed?url=https://twitter.com/jack/status/20'));
