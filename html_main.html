@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
+    <link rel="stylesheet" href="StyleNodSikt.css">
   </head>
   <body>
-    <h3>Emergency Dashboard</h3>
+    <img src="nodsiktlogo.png" alt="nodsiktlogo" id="logo">
     <div id="map"></div>
+
+    <!-- Google Maps API -->
     <script>
       function initMap() {
         var uluru = {lat: 60.392069 , lng: 5.311952};
@@ -28,6 +25,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
     </script>
     
+    <!-- Twitter API -->
     <script>
     let oembedResponse = await fetch(new Request('https://publish.twitter.com/oembed?url=https://twitter.com/jack/status/20'));
 let oembedTweet = oembedResponse.json();
