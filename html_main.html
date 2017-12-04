@@ -23,11 +23,10 @@
         map: map
         });
           google.maps.event.addListener(markerOne,'click',function() {
-    var infowindow = new google.maps.InfoWindow({
-      content:"Hello World!"
-    });
-  infowindow.open(map,markerOne);
- });
+     var infowindow = new google.maps.InfoWindow({
+    content: "Hello World!"
+  });
+  infowindow.open(map,marker);
 }
     </script>
     <script async defer
