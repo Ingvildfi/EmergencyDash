@@ -10,16 +10,25 @@
     <!-- Google Maps API -->
     <script>
       function initMap() {
-        var uluru = {lat: 60.392069 , lng: 5.311952};
+        var markerOne = {lat: 60.41768 , lng: 5.47087};
+        var markerTwo = {lat: 60.392069 , lng: 5.311952};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: uluru
-        });
+          center: markerTwo});
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: markerTwo,
           map: map
         });
-      }
+        var marker = new google.maps.Marker({ position: markerOne,
+        map: map
+        });
+          google.maps.event.addListener(markerOne,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"Hello World!"
+    });
+  infowindow.open(map,markerOne);
+  });
+}
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
