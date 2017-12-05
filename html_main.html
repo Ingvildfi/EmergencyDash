@@ -17,10 +17,12 @@
           center: markerTwo});
         var marker = new google.maps.Marker({
           position: markerTwo,
-          map: map
+          map: map,
+          icon: 'twitterposition.png'
         });
         var marker = new google.maps.Marker({ position: markerOne,
-        map: map
+        map: map,
+        icon: 'twitterposition.png'
         });
           google.maps.event.addListener(markerOne,'click',function() {
     var infowindow = new google.maps.InfoWindow({
