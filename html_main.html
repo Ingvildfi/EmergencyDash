@@ -1,13 +1,3 @@
-import edu.stanford.nlp.ie.AbstractSequenceClassifier;
-import edu.stanford.nlp.ie.crf.*;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.sequences.DocumentReaderAndWriter;
-import edu.stanford.nlp.util.Triple;
-
-import java.util.List;
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,66 +44,5 @@ let oembedTweet = oembedResponse.json();
     
     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/n%C3%B8dsikt" data-widget-id="933313916695916544">#nødsikt Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
     
-    <script>
-      import edu.stanford.nlp.ie.AbstractSequenceClassifier;
-import edu.stanford.nlp.ie.crf.*;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.sequences.DocumentReaderAndWriter;
-import edu.stanford.nlp.util.Triple;
-
-import java.util.List;
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="StyleNodSikt.css">
-  </head>
-  <body>
-    <img src="nodsiktlogo.png" alt="nodsiktlogo" id="logo">
-    <div id="map"></div>
-
-    <!-- Google Maps API -->
-    <script>
-      function initMap() {
-        var markerOne = {lat: 60.41768 , lng: 5.47087};
-        var markerTwo = {lat: 60.392069 , lng: 5.311952};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: markerTwo});
-        var marker = new google.maps.Marker({
-          position: markerTwo,
-          map: map,
-          icon: 'twitterposition.png'
-        });
-        var marker = new google.maps.Marker({ position: markerOne,
-        map: map,
-        icon: 'twitterposition.png'
-        });
-          google.maps.event.addListener(markerOne,'click',function() {
-    var infowindow = new google.maps.InfoWindow({
-      content:"Hello World!"
-    });
-  infowindow.open(map,markerOne);
-  });
-}
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
-    </script>
-    
-    <!-- Twitter API -->
-    <script>
-      let oembedResponse = await fetch(new Request('https://publish.twitter.com/oembed?url=https://twitter.com/jack/status/20'));
-let oembedTweet = oembedResponse.json();
-    </script>
-    
-    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/n%C3%B8dsikt" data-widget-id="933313916695916544">#nødsikt Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
-    
-  </body>
-</html>
-
-    </script>
   </body>
 </html>
