@@ -24,12 +24,12 @@
         });
         var marker = new google.maps.Marker({ position: markerOne,
         map: map,
-        icon: 'twitterposition.png'
-        });
-          google.maps.event.addListener(markerOne,'click',function() {
-    var infowindow = new google.maps.InfoWindow({
+        icon: 'twitterposition.png',
+        google.maps.event.addListener(markerOne,'click',function() {var infowindow = new google.maps.InfoWindow({
       content:"Hello World!"
     });
+        });
+
   infowindow.open(map,markerOne);
   });
 }
