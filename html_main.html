@@ -25,8 +25,6 @@
         //icon: 'twitterposition.png'
         });
         
-        
-        //infoboks
     var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -60,45 +58,11 @@
           infowindow.open(map, marker);
         });
       }
-      
-      
-      
-      //infoboks med tweet
-      var marker = new google.maps.Marker({
-        position: myCenter,
-    });
-    marker.setMap(map);
-      var text = '<div class="infowindow-content"><blockquote class="twitter-tweet" lang="en"><p>twitter will be embeded here </p>&mdash; Botbotbot (@TheBrisBot) <a href="https://twitter.com/TheBrisBot/status/940214107181146112">December 11, 2017</a></blockquote></div>';
-    
-    var infowindow = new google.maps.InfoWindow({
-        content: text
-    });
-    google.maps.event.addListener(marker, 'click', function () {
-        infowindow.open(map, marker);
-    });
-    google.maps.event.addListener(infowindow, 'domready', function () {
-        ! function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, "script", "twitter-wjs");
-    });
-}
-initialize(); 
-      
-      
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
     </script>
         
-    
-    
-    
   <!-- 
     <iframe id="forecast_embed" frameborder="0" height="245" width="100%" 
      src="//forecast.io/embed/#lat=5.32415=-60.39299&name=Bergen&color=#00aced&font=Georgia&units=ca"></iframe>
