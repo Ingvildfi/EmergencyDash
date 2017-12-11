@@ -67,12 +67,25 @@
       
       //infoboks med tweet
     
-      var marker = new google.maps.Marker({
+ var myCenter = new google.maps.LatLng(60.41768, 5.47087);
+
+function initialize() {
+    
+    var mapProp = {
+        center: myCenter,
+        zoom: 5,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+
+    var marker = new google.maps.Marker({
         position: myCenter,
     });
 
     marker.setMap(map);
-      var text = '<div class="infowindow-content"><blockquote class="twitter-tweet" lang="en"><p>twitter will be embeded here </p>&mdash; Botbotbot (@TheBrisBot) <a href="https://twitter.com/TheBrisBot/status/940214107181146112">December 11, 2017</a></blockquote></div>';
+
+    var text = '<div class="infowindow-content"><blockquote class="twitter-tweet" lang="en"><p>twitter will be embeded here </p>&mdash; Nichim Izazvan (@NichimIzazvan) <a href="https://twitter.com/NichimIzazvan/statuses/419180893035827200">January 3, 2014</a></blockquote></div>';
     
     var infowindow = new google.maps.InfoWindow({
         content: text
@@ -90,12 +103,7 @@
                 js.id = id;
                 js.src = "//platform.twitter.com/widgets.js";
                 fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, "script", "twitter-wjs");
-    });
-}
-
-initialize();   
+            }  
     </script>
     
 
