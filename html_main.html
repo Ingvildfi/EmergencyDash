@@ -20,11 +20,12 @@
           position: markerTwo,
           map: map,
           title: 'Trykk her for å se tweeten'
-          //icon: 'twitterposition.png'
+          icon: 'twitterposition.png'
         });
         var marker = new google.maps.Marker({ position: markerOne,
         map: map,
-        //icon: 'twitterposition.png'
+        title: 'Trykk her for å se tweeten'
+        icon: 'twitterposition.png'
         });
         
     var contentString = '<div id="content">'+
@@ -54,6 +55,7 @@
          var marker = new google.maps.Marker({
           position: markerTwo,
           map: map,
+          icon: 'twitterposition.png'
           title: 'markerTwo (Ayers Rock)'
         });
         marker.addListener('click', function() {
