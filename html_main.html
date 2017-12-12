@@ -14,7 +14,6 @@
         var markerOne = {lat: 60.41768 , lng: 5.47087};
         var markerTwo = {lat: 60.392069 , lng: 5.311952};
         var markerThree = {lat: 60.1839 , lng: 5.4638};
-        
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
           center: markerTwo});
@@ -32,7 +31,6 @@
         map: map,
         //icon: 'twitterposition.png'
         });
-      
         
     var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -47,35 +45,17 @@
           content: contentString
         });
         
-        var marker = new google.maps.Marker({
-          position: markerTwo,
-          map: map,
-          // icon: 'twitterposition.png',
-          title: 'Trykk her for a se tweeten'
-        });
-        
          var marker = new google.maps.Marker({
           position: markerTwo,
           map: map,
           // icon: 'twitterposition.png',
           title: 'Trykk her for a se tweeten'
         });
-        
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
-        
-         var marker2 = new google.maps.Marker({
-          position: markerThree,
-          map: map,
-          // icon: 'twitterposition.png',
-          title: 'Trykk her for a se tweeten'
-        }); 
-        
-          marker2.addListener('click', function() {
-          infowindow.open(map, marker2);
-        });
       }
+   
       
     </script>
     
