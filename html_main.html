@@ -55,7 +55,33 @@
           infowindow.open(map, marker);
         });
       }
+      
+      var text = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="no" dir="ltr">Været i dag blir med temperatur</p>&mdash; Bris (@TheBrisBot) 
+      <a href="https://twitter.com/TheBrisBot/status/940496443948879872?ref_src=twsrc%5Etfw">December 12, 2017</a></blockquote> 
+          '</div>'+
+            '</div>';
+      var infowindow = new google.maps.InfoWindow({
+          content: text
+        });
+      
+      var marker = new google.maps.Marker({
+          position: markerThree,
+          map: map,
+          // icon: 'twitterposition.png',
+          title: 'Trykk her for a se tweeten'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+      
+      
     </script>
+    
+    
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
     </script>
