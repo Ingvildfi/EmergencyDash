@@ -39,7 +39,7 @@
           content: contentString
         });
         
-         var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
           position: markerTwo,
           map: map,
           // icon: 'twitterposition.png',
@@ -49,15 +49,34 @@
           infowindow.open(map, marker);
         });
       }
+        
+        //Prøver meg på twitter i infovindu nedenfor
+        
+    var text = '<div class="infowindow-content"><blockquote class="twitter-tweet" lang="en"><blockquote 
+       class="twitter-tweet" data-lang="en"><p lang="no" dir="ltr">Været i dag blir med temperatur</p>&mdash; Bris (@TheBrisBot) 
+       <a href="https://twitter.com/TheBrisBot/status/940496443948879872?ref_src=twsrc%5Etfw">December 12, 2017</a></blockquote></div>;
+          
+   var infowindow1 = new google.maps.InfoWindow({
+        content: text
+    });
+        
+         var marker = new google.maps.Marker({
+          position: markerOne,
+          map: map,
+          // icon: 'twitterposition.png',
+          title: 'Trykk her for a se tweeten'
+        });
+        marker.addListener('click', function() {
+          infowindow1.open(map, marker);
+        });
+      }
+      // ferdig 
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0dGtTV1OBl7AlJHN1emgGKKvlCKUDq1A&callback=initMap">
     </script>
         
-    <blockquote class="twitter-tweet" data-lang="en"><p lang="no" dir="ltr">Været i dag blir med temperatur</p>&mdash; Bris (@TheBrisBot) 
-      <a href="https://twitter.com/TheBrisBot/status/940496443948879872?ref_src=twsrc%5Etfw">December 12, 2017</a></blockquote> 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-    
+      
     
     <!-- Værdata -->
     <div id="">
