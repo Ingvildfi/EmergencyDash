@@ -63,6 +63,10 @@
           // icon: 'twitterposition.png',
           title: 'Trykk her for a se tweeten'
         }); 
+        
+          marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
       }
    
       
