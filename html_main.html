@@ -14,6 +14,7 @@
         var markerOne = {lat: 60.41768 , lng: 5.47087};
         var markerTwo = {lat: 60.392069 , lng: 5.311952};
         var markerThree = {lat: 60.1839 , lng: 5.4638};
+        
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
           center: markerTwo});
@@ -51,9 +52,17 @@
           // icon: 'twitterposition.png',
           title: 'Trykk her for a se tweeten'
         });
+        
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
+        
+         var marker = new google.maps.Marker({
+          position: markerThree,
+          map: map,
+          // icon: 'twitterposition.png',
+          title: 'Trykk her for a se tweeten'
+        }); 
       }
    
       
