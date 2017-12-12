@@ -54,6 +54,8 @@
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
+        
+        // Prøver meg nedenfor. Om det ikke funker: Huske å legg til en } på slutten ovenfor
       
       var text = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -66,16 +68,13 @@
           content: text
         });
       
-      var marker = new google.maps.Marker({
-          position: markerThree,
-          map: map,
-          // icon: 'twitterposition.png',
-          title: 'Trykk her for a se tweeten'
-        });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-      }
+      var infowindow = new google.maps.InfoWindow({
+        content: text
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
       
       
     </script>
