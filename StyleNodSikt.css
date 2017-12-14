@@ -13,5 +13,6 @@ body {
 }
 
 .twitter-timeline {
-	width:10%
+	width:50%;
+	height: 500px;
 }
